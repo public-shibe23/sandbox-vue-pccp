@@ -1,4 +1,4 @@
-import { fetchProducts } from "../api";
+import { getToken } from "../api";
 
 export const state = {
   products: []
@@ -14,8 +14,8 @@ export const mutations = {
   }
 };
 export const actions = {
-  FETCH_PRODUCTS: async ({ commit }) => {
-    const res = await fetchProducts();
+  POST_USER: async ({ commit }) => {
+    const token = await getToken();
     commit("SET_ITEMS", res.data);
   }
 };

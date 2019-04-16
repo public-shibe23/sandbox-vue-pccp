@@ -1,8 +1,8 @@
 import axios from "axios";
 
-function fetch(param) {
+function get(url, param) {
   return axios
-    .get("http://localhost:3000/data")
+    .get(url, param)
     .then(res => {
       return res;
     })
@@ -12,7 +12,12 @@ function fetch(param) {
     });
 }
 
-export async function fetchProducts(param) {
-  const res = await fetch(param);
+export async function getToken(param) {
+  const URL = "http://localhost:3000/token";
+  const res = await get(URL, param);
   return res;
+}
+
+export async function postUser(params) {
+  const token = await getToken();
 }

@@ -44,7 +44,7 @@ export default {
       console.log(data);
       this.request = data;
       this.status = "confirm";
-      // this.$store.dispatch("member/FETCH_PRODUCTS");
+      this.$store.dispatch("member/POST_USER");
     },
     registerUserInfo(data) {
       console.log(data);
