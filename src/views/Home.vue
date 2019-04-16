@@ -3,7 +3,7 @@
     <div class="columns is-centered">
       <div class="column is-6">
         <member1 v-if="isInput" @update="updateUserInfo"/>
-        <member2 v-if="isConfirm" :request="request" @register="registerUserInfo" />
+        <member2 v-if="isConfirm" :request="request" @register="registerUserInfo"/>
         <member3 v-if="isResister" :request="request"/>
       </div>
     </div>
