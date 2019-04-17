@@ -1,5 +1,5 @@
-import { getToken } from "../api";
-
+import { getToken, postUser } from "../api";
+import merge from "deepmerge";
 export const state = {
   products: []
 };
@@ -14,9 +14,11 @@ export const mutations = {
   }
 };
 export const actions = {
-  POST_USER: async ({ commit }) => {
+  POST_USER: async ({}, payload) => {
     const token = await getToken();
-    commit("SET_ITEMS", res.data);
+    const params = merge(payload, token);
+    const result = await postUser(params);
+    return result;
   }
 };
 

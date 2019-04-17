@@ -41,15 +41,12 @@ export default {
   },
   methods: {
     updateUserInfo(data) {
-      console.log(data);
       this.request = data;
       this.status = "confirm";
-      this.$store.dispatch("member/POST_USER");
-    },
-    registerUserInfo(data) {
-      console.log(data);
+          },
+    async registerUserInfo() {
+      await this.$store.dispatch("member/POST_USER", this.request);
       this.status = "register";
-      // this.$store.dispatch("member/FETCH_PRODUCTS");
     }
   }
 };
