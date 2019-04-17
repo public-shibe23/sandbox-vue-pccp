@@ -2,9 +2,9 @@
   <div class="section">
     <div class="columns is-centered">
       <div class="column is-6">
-        <member1 v-if="isInput" @update="updateUserInfo"/>
-        <member2 v-if="isConfirm" :request="request" @register="registerUserInfo"/>
-        <member3 v-if="isResister" :request="request"/>
+        <member1 v-if="isInput" @update="updateUserInfo" />
+        <member2 v-if="isConfirm" :request="request" @register="registerUserInfo" />
+        <member3 v-if="isResister" />
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ export default {
     updateUserInfo(data) {
       this.request = data;
       this.status = "confirm";
-          },
+    },
     async registerUserInfo() {
       await this.$store.dispatch("member/POST_USER", this.request);
       this.status = "register";

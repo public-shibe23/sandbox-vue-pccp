@@ -24,7 +24,7 @@ export async function postUser(params) {
   const URL = `${BASE_URL}/post`;
   const res = await get(URL, params);
   if (!res.data.Success) {
-    throw new Error("Error has occured by API.");
+    throw new Error("NG!");
   }
   return res.data;
 }
