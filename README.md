@@ -1,34 +1,18 @@
-# sandbox-vue-testable-nots
+# sandbox-vue-pccp
+Demo for Presentational and Container Component Pattern.
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run demo
 ```
 npm run serve
+npm run db
 ```
+or
 
-### Compiles and minifies for production
 ```
-npm run build
+npm run demo
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
