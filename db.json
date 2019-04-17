@@ -1,7 +1,9 @@
 {
   "token": {
-    "Success": true,
     "RequestToken": "123456ABCDEFG"
+  },
+  "post": {
+    "Success": true
   },
   "data": {
     "products": [
