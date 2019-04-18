@@ -7,7 +7,12 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input is-static" type="email" :value="request.email" readonly>
+            <input
+              class="input is-static"
+              type="email"
+              :value="request.email"
+              readonly
+            />
           </p>
         </div>
       </div>
@@ -20,7 +25,12 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input is-static" type="text" :value="request.name" readonly>
+            <input
+              class="input is-static"
+              type="text"
+              :value="request.name"
+              readonly
+            />
           </p>
         </div>
       </div>
@@ -33,7 +43,12 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input is-static" type="email" value="********" readonly>
+            <input
+              class="input is-static"
+              type="email"
+              value="********"
+              readonly
+            />
           </p>
         </div>
       </div>

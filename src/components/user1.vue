@@ -7,7 +7,13 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input" type="email" name="email" maxlength="20" v-model="input.email">
+            <input
+              class="input"
+              type="email"
+              name="email"
+              maxlength="20"
+              v-model="input.email"
+            />
           </p>
         </div>
       </div>
@@ -20,7 +26,13 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input" type="text" name="name" maxlength="20" v-model="input.name">
+            <input
+              class="input"
+              type="text"
+              name="name"
+              maxlength="20"
+              v-model="input.name"
+            />
           </p>
         </div>
       </div>
@@ -39,7 +51,7 @@
               name="password"
               maxlength="20"
               v-model="input.password"
-            >
+            />
           </p>
         </div>
       </div>

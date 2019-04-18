@@ -2,7 +2,7 @@
   "token": {
     "RequestToken": "123456ABCDEFG"
   },
-  "post": {
+  "user": {
     "Success": true
   },
   "data": {

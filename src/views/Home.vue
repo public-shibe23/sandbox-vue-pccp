@@ -2,25 +2,29 @@
   <div class="section">
     <div class="columns is-centered">
       <div class="column is-6">
-        <member1 v-if="isInput" @update="updateUserInfo" />
-        <member2 v-if="isConfirm" :request="request" @register="registerUserInfo" />
-        <member3 v-if="isResister" />
+        <user1 v-if="isInput" @update="updateUserInfo" />
+        <user2
+          v-if="isConfirm"
+          :request="request"
+          @register="registerUserInfo"
+        />
+        <user3 v-if="isResister" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import member1 from "@/components/member1.vue";
-import member2 from "@/components/member2.vue";
-import member3 from "@/components/member3.vue";
+import user1 from "@/components/user1.vue";
+import user2 from "@/components/user2.vue";
+import user3 from "@/components/user3.vue";
 
 export default {
   name: "home",
   components: {
-    member1,
-    member2,
-    member3
+    user1,
+    user2,
+    user3
   },
   data: function() {
     return {
@@ -45,7 +49,7 @@ export default {
       this.status = "confirm";
     },
     async registerUserInfo() {
-      await this.$store.dispatch("member/POST_USER", this.request);
+      await this.$store.dispatch("user/POST_USER", this.request);
       this.status = "register";
     }
   }

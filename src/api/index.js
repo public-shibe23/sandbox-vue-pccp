@@ -3,7 +3,7 @@ import { BASE_URL } from "../setting";
 
 function get(url, params) {
   return axios
-    .get(url, params)
+    .get(url, { params })
     .then(res => {
       return res;
     })
@@ -21,7 +21,7 @@ export async function getToken(params) {
 
 export async function postUser(params) {
   // 今回はPOSTではなく、GETでダミーのレスポンスを取得
-  const URL = `${BASE_URL}/post`;
+  const URL = `${BASE_URL}/user`;
   const res = await get(URL, params);
   if (!res.data.Success) {
     throw new Error("NG!");

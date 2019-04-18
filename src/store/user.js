@@ -3,7 +3,7 @@ import merge from "deepmerge";
 export const state = {};
 export const mutations = {};
 export const actions = {
-  POST_USER: async ({ commit }, payload) => {
+  POST_USER: async (context, payload) => {
     const token = await getToken();
     const params = merge(payload, token);
     const result = await postUser(params);
